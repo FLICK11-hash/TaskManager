@@ -12,7 +12,16 @@ def _default_path() -> str:
     return os.path.join(base, DATA_FILENAME)
 
 class Task:
-    """Representation of a task."""
+    """Representation of a task
+  
+  Attributes:
+              - created - date
+              - completed - date
+              - name - string
+              - unique id - number
+              - priority - int value of 1, 2, or 3; 1 is default
+              - due date - date, this is optional
+  """
     _id_counter = 1                                 # ID
 
     def __init__(self, name: str, priority: int = 1, due_date: Optional[datetime] = None):
